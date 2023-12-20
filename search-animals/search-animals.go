@@ -125,6 +125,13 @@ func main() {
 				locomotion: "slither"}
 		}
 
-	}
+		switch do {
+		case "eat":
+			//do somth
+		case "move":
+			//do somth
+		case "speak":
+		//do somth
 
+	}
 }
