@@ -107,13 +107,22 @@ func main() {
 
 		switch animalName {
 		case "cow":
-			fmt.Println("cow")
+			anm = Animal{
+				food:       "grass",
+				noise:      "moo",
+				locomotion: "walk"}
 
 		case "bird":
-			fmt.Println("bird")
+			anm = Animal{
+				food:       "worms",
+				noise:      "peep",
+				locomotion: "fly"}
 
 		case "snake":
-			fmt.Println("snake")
+			anm = Animal{
+				food:       "mice",
+				noise:      "hsss",
+				locomotion: "slither"}
 		}
 
 	}
