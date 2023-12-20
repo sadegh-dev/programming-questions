@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 /*
 
 => Coursera.Org <=
@@ -56,13 +58,64 @@ then give another 2 points. If the program contains three methods called Eat(), 
 and all of their receiver types are Animal, give another 2 points.
 
 ##################################
+##################################
+##################################
+##################################
 
+/*
 
+> animalName  eat/move/speak
+[print answer]
 */
-import (
-	"fmt"
-)
+
+var anm Animal
+
+type Animal struct {
+	food       string
+	noise      string
+	locomotion string
+}
+
+func (anm Animal) Eat() {
+	fmt.Println(anm.food)
+}
+
+func (anm Animal) Move() {
+	fmt.Println(anm.locomotion)
+}
+
+func (anm Animal) Speak() {
+	fmt.Println(anm.noise)
+}
 
 func main() {
-	fmt.Println("hello !")
+
+	var animalName, do string
+
+	for true {
+
+		// Inputs
+		fmt.Print("> ")
+		_, err := fmt.Scanf("%s %s", &animalName, &do)
+
+		if err != nil {
+			fmt.Println("Error !")
+			break
+		}
+
+		// Initialize
+
+		switch animalName {
+		case "cow":
+			fmt.Println("cow")
+
+		case "bird":
+			fmt.Println("bird")
+
+		case "snake":
+			fmt.Println("snake")
+		}
+
+	}
+
 }
